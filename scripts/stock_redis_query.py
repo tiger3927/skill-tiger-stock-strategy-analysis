@@ -39,6 +39,8 @@ from typing import Dict, List, Any, Optional
 sys.path.insert(0, r'E:\veighna_studio_43\Lib\site-packages')
 
 # 从 vnpy 配置中读取设置
+import sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from tools import load_json
 
 settings=load_json("./scripts/setting.json")

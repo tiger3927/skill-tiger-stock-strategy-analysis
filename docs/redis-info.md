@@ -13,19 +13,20 @@ scripts/stock_redis_query.py
 账户 Redis 查询工具
 通过 Web API 读取 Redis db11 中的账户和策略信息
 
+
 用法:
-    python stock_redis_query.py overview              # 1. 查所有账户概览
-    python stock_redis_query.py account 用户名         # 2. 查指定账户信息和持仓
-    python stock_redis_query.py strategies 用户名      # 3. 查指定账户策略列表和概要
-    python stock_redis_query.py distribution 用户名    # 4. 查指定账户持仓分布
-    python stock_redis_query.py detail 用户名 策略名   # 6. 查指定策略详情
+    python scripts/stock_redis_query.py overview              # 1. 查所有账户概览
+    python scripts/stock_redis_query.py account 用户名         # 2. 查指定账户信息和持仓
+    python scripts/stock_redis_query.py strategies 用户名      # 3. 查指定账户策略列表和概要
+    python scripts/stock_redis_query.py distribution 用户名    # 4. 查指定账户持仓分布
+    python scripts/stock_redis_query.py detail 用户名 策略名   # 6. 查指定策略详情
 
 示例:
-    python stock_redis_query.py overview                                    # 查看所有账户
-    python stock_redis_query.py account 楠总1号                             # 查看楠总1号账户详情
-    python stock_redis_query.py strategies 楠总1号                          # 查看楠总1号全部策略的信息列表
-    python stock_redis_query.py distribution 楠总1号                        # 查看楠总1号的策略持仓分布
-    python stock_redis_query.py detail 楠总1号 OPENCLAW-NFLX               # 查看OPENCLAW-NFLX策略详情（包括当前持仓的交易历史）
+    python scripts/stock_redis_query.py overview                                    # 查看所有账户
+    python scripts/stock_redis_query.py account 楠总1号                             # 查看楠总1号账户详情
+    python scripts/stock_redis_query.py strategies 楠总1号                          # 查看楠总1号全部策略的信息列表
+    python scripts/stock_redis_query.py distribution 楠总1号                        # 查看楠总1号的策略持仓分布
+    python scripts/stock_redis_query.py detail 楠总1号 OPENCLAW-NFLX               # 查看OPENCLAW-NFLX策略详情（包括当前持仓的交易历史）
 
 参数说明:
     用户名: 如 "楠总1号"、"tiger-code"
