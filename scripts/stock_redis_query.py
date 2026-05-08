@@ -610,13 +610,13 @@ def main():
     if args.command == 'overview':
         query.overview()
     elif args.command == 'account':
-        query.account(args.username)
+        query.account(args.username.replace(' ', ''))
     elif args.command == 'strategies':
-        query.strategies(args.username)
+        query.strategies(args.username.replace(' ', ''))
     elif args.command == 'distribution':
-        query.distribution(args.username)
+        query.distribution(args.username.replace(' ', ''))
     elif args.command == 'detail':
-        query.detail(args.username, args.strategy_name)
+        query.detail(args.username.replace(' ', ''), args.strategy_name.replace(' ', ''))
 
 
 if __name__ == "__main__":

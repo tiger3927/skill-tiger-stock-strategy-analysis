@@ -1,6 +1,6 @@
 ---
 name: "tiger-stock-strategy-analysis"
-description: "股票量化策略分析工具：为 vnpy 量化软件提供策略分析和下单前审核。支持智能马丁格尔策略、智能短期趋势策略；可查询用户 redis 上的量化交易账户信息、策略执行信息。无需 API key。"
+description: "股票量化策略分析工具：为 vnpy 量化软件提供策略分析和下单前审核。支持智能马丁格尔策略、智能短期趋势策略；可查询用户 redis 上的vnpy的量化交易账户信息、策略执行信息。无需 API key。"
 ---
 
 # tiger-stock-strategy-analysis
@@ -85,13 +85,25 @@ description: "股票量化策略分析工具：为 vnpy 量化软件提供策略
 
 举例：
 
-1. 查询特定用户的账户信息
+1. 查询特定用户的vnpy量化交易账户信息
+
+直接采用命令行方式，带特定参数！
+不要尝试用API或者编写新代码，因为命令行中的代码是完善可用的。
+
+** 特别注意 ** ：账户的现金余额（balance）其实就是总资产，是包含持仓用的保证金在内的金额，不是剩下的现金金额。
 
 ```bash
-python scripts/stock_redis_query.py --username <用户名> --type account
+cd <技能目录>
+python scripts/stock_redis_query.py overview              # 1. 查所有账户概览
+python scripts/stock_redis_query.py account "用户名"         # 2. 查指定账户信息和持仓
+python scripts/stock_redis_query.py strategies "用户名"      # 3. 查指定账户策略列表和概要
+python scripts/stock_redis_query.py distribution "用户名"    # 4. 查指定账户持仓分布
+python scripts/stock_redis_query.py detail "用户名" "策略名"    # 6. 查指定策略详情
 ```
 
 2. 查询策略执行记录
+
+采用命令行方式，带特定参数
 
 ```bash
 python scripts/stock_redis_query.py --username <用户名> --type strategy
