@@ -38,4 +38,5 @@ scripts/stock_redis_query.py
     - strategies: 显示持仓中策略和空仓策略列表
     - distribution: 按分类显示持仓分布（强势非AI、科技巨头、非科技巨头、ETF等）
     - detail: 显示策略详细信息，包括持仓概况、交易历史和完整JSON数据
+    - 特别注意：总资产是包含持仓占用保证金和可用现金在内的全部资产（不能再加上持仓市值）
 ```
